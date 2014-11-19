@@ -10,7 +10,19 @@ class Computer:
         self.mem=parts.Memory()
         self.hd=parts.HardDisk()
     # implement the class below this line    
-
+    def startComputer(self):
+	self.cpu.__init__()
+	self.cpu.check()
+	self.mem.__init__()
+	self.mem.load()
+	self.hd.__init__()
+	self.hd.mount()
+    def printCPUInfo(self):
+	self.cpu.getInfo()
+    def printMemInfo(self):
+	self.mem.getInfo()
+    def printHDInfo(self):
+	self.hd.getInfo()
 
 
 
